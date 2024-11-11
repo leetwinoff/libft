@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] && s2[i] && i < n)
@@ -33,7 +33,7 @@ int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 
 int main()
 {
-    unsigned int n = 3;
+    size_t n = 3;
     char a[] = "abcd";
     char b[] = "abc";
     char a1[] = "abca";
@@ -53,7 +53,7 @@ int main()
     printf("Result should be negative = %d\n", result2_ft); 
     printf("Result should be positive = %d\n", result3_ft); 
 
-    unsigned int n1 = 3;
+    size_t n1 = 3;
     char a1_std[] = "abcd";
     char b1_std[] = "abc";
     char a11_std[] = "abca";

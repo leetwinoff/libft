@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-unsigned int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -24,6 +24,6 @@ unsigned int	ft_strlen(const char *s)
 // int main()
 // {
 //     char *str = "Count the length of this string!";
-//     unsigned int result = ft_strlen(str);
+//     size_t result = ft_strlen(str);
 //     printf("Total length of the string is %u", result);
 // }

@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	dst_len;
-	unsigned int	src_len;
-	unsigned int	i;
-	unsigned int	result;
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+	size_t	result;
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
@@ -31,7 +31,7 @@ unsigned int	ft_strlcat(char *dst, const char *src, unsigned int size)
 	dst[dst_len] = '\0';
 	return (result);
 }
-/*
+
 
 #include <bsd/string.h>
 
@@ -40,50 +40,49 @@ int main()
 	// The maximum size that can be copied into dst
 	char dst[20] = "Hello, ";
 	const char *src = "World!";
-	unsigned int size = sizeof(dst);
+	size_t size = sizeof(dst);
 
 	printf("Before ft_strlcat:\n");
 	printf("dst: '%s'\n", dst);
 	printf("src: '%s'\n", src);
 
-	unsigned int result = ft_strlcat(dst, src, size);
+	size_t result = ft_strlcat(dst, src, size);
 
 	printf("\nAfter ft_strlcat:\n");
 	printf("dst: '%s'\n", dst);
-	printf("Result (expected total length): %u\n", result);
+	printf("Result (expected total length): %lu\n", result);
 
 	//Same test with original function
 	char dst1[20] = "Hello, ";
 	const char *src1 = "World!";
-	unsigned int size1 = sizeof(dst1);
+	size_t size1 = sizeof(dst1);
 
-	unsigned int result1 = strlcat(dst1, src1, size1);
+	size_t result1 = strlcat(dst1, src1, size1);
 
 	printf("\nAfter original strlcat:\n");
 	printf("dst: '%s'\n", dst1);
-	printf("Result (expected total length): %u\n", result1);
+	printf("Result (expected total length): %lu\n", result1);
 
 
 
 
 	// Test with a smaller buffer size
 	char small_dst[15] = "Hello, ";
-	unsigned int small_size = sizeof(small_dst);
+	size_t small_size = sizeof(small_dst);
 	char small_dst1[15] = "Hello, ";
-	unsigned int small_size1 = sizeof(small_dst1);
+	size_t small_size1 = sizeof(small_dst1);
 
 	printf("\nTest with smaller buffer:\n");
 	printf("small_dst: '%s'\n", small_dst);
 	result = ft_strlcat(small_dst, src, sizeof(small_dst));
 	printf("small_dst after strlcat: '%s'\n", small_dst);
-	printf("Result (expected total length): %u\n", result);
+	printf("Result (expected total length): %lu\n", result);
 
 	printf("\nTest with smaller buffer with original function:\n");
 	printf("small_dst: '%s'\n", small_dst1);
 	result = strlcat(small_dst1, src, sizeof(small_dst1));
 	printf("small_dst after strlcat: '%s'\n", small_dst1);
-	printf("Result (expected total length): %u\n", result);
+	printf("Result (expected total length): %lu\n", result);
 
 	return 0;
 }
-*/
