@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -34,7 +34,7 @@ int	count_words(const char *s, char c)
 	return (count);
 }
 
-char	*copy_words(const char *start, int length)
+static char	*copy_words(const char *start, int length)
 {
 	int		i;
 	char	*word;
@@ -80,7 +80,6 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 /*
-
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

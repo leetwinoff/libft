@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	max_divider(int n)
+static int	max_divider(int n)
 {
 	int	div;
 
