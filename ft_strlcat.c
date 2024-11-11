@@ -31,8 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len] = '\0';
 	return (result);
 }
-
-
+/*
 #include <bsd/string.h>
 
 int main()
@@ -86,3 +85,4 @@ int main()
 
 	return 0;
 }
+*/

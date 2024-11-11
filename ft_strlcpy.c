@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, unsigned int size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	src_len;
-	unsigned int	copy;
+	size_t	src_len;
+	size_t	copy;
 
 	copy = 0;
 	src_len = ft_strlen(src);
@@ -36,9 +36,9 @@ size_t	ft_strlcpy(char *dst, const char *src, unsigned int size)
 
 int main()
 {
-	unsigned int	result;
-	unsigned int	result1;
-	unsigned int	size = 1;
+	size_t	result;
+	size_t	result1;
+	size_t	size = 1;
 	char	*src = "Hello World";
 	char	*dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	char	*src1 = "Hello World";

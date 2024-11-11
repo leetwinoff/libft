@@ -34,9 +34,9 @@ static int	count_words(const char *s, char c)
 	return (count);
 }
 
-static char	*copy_words(const char *start, int length)
+static char	*copy_words(const char *start, unsigned int length)
 {
-	int		i;
+	unsigned int		i;
 	char	*word;
 
 	i = 0;
@@ -92,12 +92,11 @@ int main()
 	char **result = ft_split(str, c);
 	while (i < 5)
 	{
-		printf("Splited word - %10s\n", result[i]);
+		printf("Splited word - %s\n", result[i]);
 		free(result[i]);
 		i++;	
 	}
 	free(result);
 	return (0);
 }
-
 */
