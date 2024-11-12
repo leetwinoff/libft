@@ -18,7 +18,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t			i;
 
 	i = 0;
-	ptr = s;
+	ptr = (unsigned char *)s;
 	byte = (unsigned char)c;
 	while (i < n)
 	{
@@ -34,6 +34,11 @@ int	main()
 	if (ft_memset(buffer, 0, sizeof(buffer)))
 	{
 		printf("Buffer was successfully set to zero.\n");
+	}
+	int i = 0;
+	while (i < 10)
+	{
+		printf("%d/", buffer[i++]);
 	}
 }
 */

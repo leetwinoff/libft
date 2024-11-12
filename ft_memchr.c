@@ -14,27 +14,24 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
-	unsigned char	byte;
 	size_t			i;
 
 	ptr = (unsigned char *)s;
-	byte = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		if (ptr[i] == byte)
+		if (ptr[i] == (unsigned char)c)
 			return ((void *)&ptr[i]);
 		i++;
 	}
 	return (0);
 }
 /*
-
 #include <stdio.h>
 int main()
 {
 	char buffer[] = "Hellow World";
-	char ch = 'a';
+	char ch = 'e';
 	char *result;
 
 	result = ft_memchr(buffer, ch, sizeof(buffer));
