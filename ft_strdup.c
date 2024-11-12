@@ -13,8 +13,8 @@
 
 char	*ft_strdup(const char *s)
 {
+	size_t	src_len;
 	char	*duplicated;
-	size_t		src_len;
 	int		i;
 
 	i = 0;
@@ -30,7 +30,7 @@ char	*ft_strdup(const char *s)
 	duplicated[i] = '\0';
 	return (duplicated);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -46,3 +46,4 @@ int main()
 	printf("Duplicated with strdup: %s\n", duplicated_original);
 	free(duplicated_original);
 }
+*/

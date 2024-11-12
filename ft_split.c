@@ -36,8 +36,8 @@ static int	count_words(const char *s, char c)
 
 static char	*copy_words(const char *start, unsigned int length)
 {
-	unsigned int		i;
-	char	*word;
+	unsigned int	i;
+	char			*word;
 
 	i = 0;
 	word = malloc((length + 1) * sizeof(char));
